@@ -70,19 +70,19 @@ export const getButtons = (role:string) => {
         case 'Thesis':
             return [{label:'Request Thesis', className:'',link:'mailto:jackrockocasey@gmail.com'}];
         case 'KPISS':
-            return [{label:'Get KPISS Radio on the App Store', className:'', link:'https://apps.apple.com/us/app/kpiss-radio/id1553622148'},{label:'Listen to Lunar Rotation', className:'',link:'https://kpiss.fm/show/lunar-rotation/'}];
+            return [{label:'Get it on the App Store', className:'', link:'https://apps.apple.com/us/app/kpiss-radio/id1553622148'},{label:'Listen to Lunar Rotation', className:'',link:'https://kpiss.fm/show/lunar-rotation/'}];
         case 'Beatitude':
-            return [{label:'Get Beatitude on the App Store', className:'',link:'https://apps.apple.com/us/app/beatitude/id1424467447'}];
+            return [{label:'Get on the App Store', className:'',link:'https://apps.apple.com/us/app/beatitude/id1424467447'}];
         case 'Crate Digger':
-            return [{label:'See Crate Digger on Github', className:'', link:'https://github.com/jcbauman/CrateDigger'}];
+            return [{label:'View on Github', className:'', link:'https://github.com/jcbauman/CrateDigger'}];
         case 'Quio':
-            return [{label:'View Quio Health on the App Store', className:'quioBlue', link:'https://apps.apple.com/us/app/quio-health/id1371020016'},{label:'Company Website', className:'quioBlue',link:'https://www.quio.com/'}];
+            return [{label:'Quio on the App Store', className:'quioBlue', link:'https://apps.apple.com/us/app/quio-health/id1371020016'},{label:'Company Website', className:'quioBlue',link:'https://www.quio.com/'}];
         case 'Super 8':
-            return [{label:'Listen to Super 8 Archives', className:'', link: 'https://www.mixcloud.com/djrockonyc/'}];
+            return [{label:'Super 8 Archives', className:'', link: 'https://www.mixcloud.com/djrockonyc/'}];
         case 'Graduation':
             return [{label:'Connect with Me', className:'linkedInBlue',link:'https://www.linkedin.com/in/jackcaseybauman/'}];
         case 'Scratch':
-            return [{label:'Play some old games', className: 'scratchOrange',link:'https://scratch.mit.edu/users/thevaudevillehouse/'}]
+            return [{label:'Play Games', className: 'scratchOrange',link:'https://scratch.mit.edu/users/thevaudevillehouse/'}]
         default:
             return [];
     }

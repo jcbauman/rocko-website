@@ -15,6 +15,7 @@ import {useState, useEffect} from 'react';
 
 interface DetailsCardProps{
     title: String;
+    className:any;
 }
 
 export default function DetailsCard(props:DetailsCardProps){
@@ -22,7 +23,7 @@ const buttons:Array<{label:string,className?:string,link?:string}> = getButtons(
 
 
     return(
-        <div className='detailsComponent fade-in-card'>
+        <div className={`detailsComponent ${props.className}`}>
             <div className='companyContainer'>
                 <p className='promptText'>COMPANY:</p>
                 <h5>{getCompany(props.title)}</h5>

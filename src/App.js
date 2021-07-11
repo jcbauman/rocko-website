@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import { useHistory,useLocation,Route,Router,Switch } from 'react-router-dom';
 import './App.css';
-import {DetailsComponent, RecordCrateComponent} from "./components";
+import {DetailsCard, DetailsComponent, RecordCrateComponent} from "./components";
 
 function App() {
     const records = ['Scratch','Playwriting','Graduation','Attic Band','Crate Digger','Thesis','KPISS', 'Super 8','Quio','Beatitude'];
@@ -30,7 +30,7 @@ function App() {
             <header className="App-header">
                 {/*{showDetails === '' ? */}
                     <RecordCrateComponent records={records} selectedItem={selectedItem} setSelectedItem={setSelectedItem} history={history} showDetails={showDetails} setShowDetails={setShowDetails} lastSelectedItem={lastSelectedItem}/>
-
+                    <DetailsCard className={showDetails !== '' ? 'fade-in-card' : 'cardHidden'} title={showDetails}/>
                 {/*:*/}
                 {/* <DetailsComponent title={showDetails} setShowDetails={setShowDetails} setSelectedItem={setSelectedItem} selectedItem={selectedItem}/>}*/}
             </header>

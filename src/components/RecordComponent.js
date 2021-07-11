@@ -46,9 +46,9 @@ export default function RecordComponent(props:RecordComponentProps){
 
 
     return(
-        <div className={`recordContainer ${(props.id > props.selectedRecord && !props.hideRecords) ? 'recordTipped' : ''} ${props.hideRecords ? 'fade-out-grit' : ''}`} style={{top:getHeight(props.id,props.hideRecords),zIndex:getZIndex('image',props.id)}} onClick={() => onClickHandler(props.id)}>
+        <div className={`recordContainer ${props.chosenRecord ? 'corner-radius-slow' : 'centerRecord'} ${(props.id > props.selectedRecord && !props.hideRecords) ? 'recordTipped' : ''} ${props.hideRecords ? 'fade-out-grit' : ''}`} style={{top:getHeight(props.id,props.hideRecords),zIndex:getZIndex('image',props.id)}} onClick={() => onClickHandler(props.id)}>
             <img className={`gritCover ${props.chosenRecord ? 'fade-out-grit-slow' : ''}`} style={{zIndex:getZIndex('grit',props.id)}} src={recordSleeve} alt=""/>
-            <img className={`recordImage  ${props.chosenRecord ? 'corner-radius-slow' : ''}`} src={getImage(props.title)} alt={props.title}/>
+            <img className={`recordImage  `} src={getImage(props.title)} alt={props.title}/>
         </div>
     )
 }

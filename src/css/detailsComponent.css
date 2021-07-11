@@ -2,7 +2,18 @@
     background-color: antiquewhite;
     border-radius: 10px;
     color:black;
-    width:50vw;
+    width:calc(100vw - 30px);
+    margin-left:15px;
+    margin-top:calc(50vh + 50px);
+
+}
+
+@media only screen and (min-width:750px){
+    .detailsComponent{
+        width:calc(100vw - 50vh - 60px);
+        margin-left:calc(50vh + 40px);
+        margin-top:0;
+    }
 }
 
 .detailsComponent h5,
@@ -102,6 +113,9 @@
     transform:scale(1.2) rotateZ(-180deg);
 }
 
+.cardHidden{
+    opacity:0;
+}
 
 /*fade animation*/
 .fade-in-card {
@@ -157,35 +171,37 @@
 }
 
 .fade-out-grit-slow {
-    animation: fadeOutSlow 3s forwards;
-    -webkit-animation: fadeOutSlow 3s forwards;
-    -moz-animation: fadeOutSlow 3s forwards;
-    -o-animation: fadeOutSlow 3s forwards;
+    animation: fadeOutSlow 2s forwards;
+    -webkit-animation: fadeOutSlow 2s forwards;
+    -moz-animation: fadeOutSlow 2s forwards;
+    -o-animation: fadeOutSlow 2s forwards;
 }
 @keyframes fadeOutSlow {
     0% {opacity:.37;}
     30% {opacity:.37;}
-    100% {opacity:0;}
+    100% {opacity:0;cursor:default;}
 }
 
 @-moz-keyframes fadeOutSlow {
     0% {opacity:.37;}
     30% {opacity:.37;}
-    100% {opacity:0;}
+    100% {opacity:0;cursor:default;}
 }
 
 @-webkit-keyframes fadeOutSlow {
     0% {opacity:.37;}
     30% {opacity:.37;}
-    100% {opacity:0;}
+    100% {opacity:0;cursor:default;}
 }
 
 @-o-keyframes fadeOutSlow {
     0% {opacity:.37;}
     30% {opacity:.37;}
-    100% {opacity:0;}
+    100% {opacity:0;cursor:default;}
 }
+@media only screen and (min-width:600px){
 
+}
 .corner-radius-slow {
     animation: cornerRadiusSlow 3s forwards;
     -webkit-animation: cornerRadiusSlow 3s forwards;
@@ -193,25 +209,8 @@
     -o-animation: cornerRadiusSlow 3s forwards;
 }
 @keyframes cornerRadiusSlow {
-    0% {border-radius: 0;}
-    30% {border-radius: 0;}
-    100% {border-radius: 30px;}
-}
-
-@-moz-keyframes cornerRadiusSlow {
-    0% {border-radius: 0;}
-    30% {border-radius: 0;}
-    100% {border-radius: 30px;}
-}
-
-@-webkit-keyframes cornerRadiusSlow {
-    0% {border-radius: 0;}
-    30% {border-radius: 0;}
-    100% {border-radius: 30px;}
-}
-
-@-o-keyframes cornerRadiusSlow {
-    0% {border-radius: 0;}
-    30% {border-radius: 0;}
-    100% {border-radius: 30px;}
+    0% {border-radius: 0;margin-left:calc((100vw - 50vh) / 2);}
+    30% {border-radius: 0;margin-left:calc((100vw - 50vh) / 2);}
+    66% {border-radius: 30px;margin-left:calc((100vw - 50vh) / 2);}
+    100% { margin:15px;border-radius: 30px;cursor:default;}
 }
