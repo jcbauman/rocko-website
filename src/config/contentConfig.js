@@ -122,7 +122,7 @@ export const getImageCredits = (title:string) => {
         case 'Thesis':
             return 'Creative Commons Licensed';
         case 'KPISS':
-            return 'Courtesy of KPISS, App Logo designed by me';
+            return 'Courtesy of KPISS';
         case 'Beatitude':
             return 'Designed by me'
         case 'Crate Digger':

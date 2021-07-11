@@ -5,10 +5,9 @@
     width:calc(100vw - 30px);
     margin-left:15px;
     margin-top:calc(50vh + 50px);
-
 }
 
-@media only screen and (min-width:750px){
+@media only screen and (min-width:900px){
     .detailsComponent{
         width:calc(100vw - 50vh - 60px);
         margin-left:calc(50vh + 40px);
@@ -97,16 +96,16 @@
 
 .rightArrowDetails{
     opacity:1;
-    width: 25px;
-    height:25px;
+    width: 30px;
+    height:30px;
     cursor:pointer;
-    position:fixed;
-    right:calc(43vw - 25vh);
+    position:absolute;
+    left:55vh;
+    top:5vh;
     box-shadow: darkslategray;
     transition-delay: 1s;
     transition-property: transform;
     transition: .5s;
-    transform: rotateZ(-180deg);
 }
 
 .rightArrowDetails:hover{
@@ -119,36 +118,40 @@
 
 /*fade animation*/
 .fade-in-card {
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
+    animation: fadeIn 4s;
+    -webkit-animation: fadeIn 4s;
+    -moz-animation: fadeIn 4s;
+    -o-animation: fadeIn 4s;
 }
 @keyframes fadeIn {
     0% {opacity:0;}
-    100% {opacity:1;}
+    50% {opacity:0;}
+    100% {opacity:1; z-index:100;}
 }
 
 @-moz-keyframes fadeIn {
     0% {opacity:0;}
-    100% {opacity:1;}
+    50% {opacity:0;}
+    100% {opacity:1;z-index:100;}
 }
 
 @-webkit-keyframes fadeIn {
     0% {opacity:0;}
-    100% {opacity:1;}
+    50% {opacity:0;}
+    100% {opacity:1;z-index:100;}
 }
 
 @-o-keyframes fadeIn {
     0% {opacity:0;}
-    100% {opacity:1;}
+    50% {opacity:0;}
+    100% {opacity:1;z-index:100;}
 }
 
 .fade-out-grit {
     animation: fadeOut 2s forwards;
-    -webkit-animation: fadeOut 1s forwards;
-    -moz-animation: fadeOut 1s forwards;
-    -o-animation: fadeOut 1s forwards;
+    -webkit-animation: fadeOut 2s forwards;
+    -moz-animation: fadeOut 2s forwards;
+    -o-animation: fadeOut 2s forwards;
 }
 @keyframes fadeOut {
     0% {opacity:1;}
@@ -202,6 +205,36 @@
 @media only screen and (min-width:600px){
 
 }
+.border-radius-slow {
+    animation: borderRadiusSlow 3s forwards;
+    -webkit-animation: borderRadiusSlow 3s forwards;
+    -moz-animation: borderRadiusSlow 3s forwards;
+    -o-animation: borderRadiusSlow 3s forwards;
+}
+@keyframes borderRadiusSlow {
+    0% {border-radius: 0;}
+    50% {border-radius: 0;}
+    100% { border-radius: 30px;}
+}
+@-moz-keyframes borderRadiusSlow {
+   0% {border-radius: 0;}
+    50% {border-radius: 0;}
+    100% { border-radius: 30px;}
+}
+
+@-webkit-keyframes borderRadiusSlow {
+   0% {border-radius: 0;}
+    50% {border-radius: 0;}
+    100% { border-radius: 30px;}
+}
+
+@-o-keyframes borderRadiusSlow {
+    0% {border-radius: 0;}
+    50% {border-radius: 0;}
+    100% { border-radius: 30px;}
+}
+
+
 .corner-radius-slow {
     animation: cornerRadiusSlow 3s forwards;
     -webkit-animation: cornerRadiusSlow 3s forwards;
@@ -213,4 +246,54 @@
     30% {border-radius: 0;margin-left:calc((100vw - 50vh) / 2);}
     66% {border-radius: 30px;margin-left:calc((100vw - 50vh) / 2);}
     100% { margin:15px;border-radius: 30px;cursor:default;}
+}
+@-moz-keyframes cornerRadiusSlow {
+   0% {border-radius: 0;margin-left:calc((100vw - 50vh) / 2);}
+    30% {border-radius: 0;margin-left:calc((100vw - 50vh) / 2);}
+    66% {border-radius: 30px;margin-left:calc((100vw - 50vh) / 2);}
+    100% { margin:15px;border-radius: 30px;cursor:default;}
+}
+
+@-webkit-keyframes cornerRadiusSlow {
+   0% {border-radius: 0;margin-left:calc((100vw - 50vh) / 2);}
+    30% {border-radius: 0;margin-left:calc((100vw - 50vh) / 2);}
+    66% {border-radius: 30px;margin-left:calc((100vw - 50vh) / 2);}
+    100% { margin:15px;border-radius: 30px;cursor:default;}
+}
+
+@-o-keyframes cornerRadiusSlow {
+    0% {border-radius: 0;margin-left:calc((100vw - 50vh) / 2);}
+    30% {border-radius: 0;margin-left:calc((100vw - 50vh) / 2);}
+    66% {border-radius: 30px;margin-left:calc((100vw - 50vh) / 2);}
+    100% { margin:15px;border-radius: 30px;cursor:default;}
+}
+
+.turn-opposite-direction {
+    animation: turnOppositeDirection 4s forwards;
+    -webkit-animation: turnOppositeDirection 4s forwards;
+    -moz-animation: turnOppositeDirection 4s forwards;
+    -o-animation: turnOppositeDirection 4s forwards;
+}
+@keyframes turnOppositeDirection {
+   0% { opacity:0;transform: rotateZ(0deg);}
+    50% { opacity:0;transform: rotateZ(0deg);}
+    100% {opacity:1;transform: rotateZ(-180deg);}
+}
+
+@-moz-keyframes turnOppositeDirection {
+    0% { opacity:0;transform: rotateZ(0deg);}
+    50% { opacity:0;transform: rotateZ(0deg);}
+    100% {opacity:1;transform: rotateZ(-180deg);}
+}
+
+@-webkit-keyframes turnOppositeDirection {
+    0% { opacity:0;transform: rotateZ(0deg);}
+    50% { opacity:0;transform: rotateZ(0deg);}
+    100% {opacity:1;transform: rotateZ(-180deg);}
+}
+
+@-o-keyframes turnOppositeDirection {
+    0% { transform: rotateZ(0deg);}
+    50% { transform: rotateZ(0deg);}
+    100% {transform: rotateZ(-180deg);}
 }

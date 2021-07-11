@@ -22,6 +22,10 @@ export default function RecordCrateComponent(props:RecordCrateProps){
     const handleClickArrow = () => {
         setShowDetails(records[selectedItem]);
     };
+    const handleCloseArrow = () => {
+        setShowDetails('');
+    setTimeout(() => {setSelectedItem(100);}, 500);
+    }
 
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
@@ -34,6 +38,9 @@ export default function RecordCrateComponent(props:RecordCrateProps){
             {<img className={`rightArrow ${selectedItem === 100 || showDetails !== '' ? 'rightArrowHidden' : ''}`}
                   onClick={handleClickArrow} src={rightArrow} alt='right arrow'
                   style={{top: getYPos(selectedItem === 100 ? lastSelectedItem : selectedItem)}}/>}
+            {showDetails !== '' ? <img className={`rightArrowDetails turn-opposite-direction`}
+                  onClick={handleCloseArrow} src={rightArrow} alt='back arrow'
+                  /> : ''}
         </div>
     )
 }

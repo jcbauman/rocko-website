@@ -20,7 +20,7 @@ const handleClickArrow = () => {
     return(
         <div>
             <DetailsRecordComponent title={title} id={selectedItem}/>
-            <img className={`rightArrowDetails`}
+            <img className='rightArrowDetails turn-opposite-direction'
                   onClick={handleClickArrow} src={rightArrow} alt='back arrow'
                   />
             <DetailsCard title={title}/>
