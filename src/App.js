@@ -27,7 +27,7 @@ function App() {
                 <RecordCrateComponent records={records} selectedItem={selectedItem} setSelectedItem={setSelectedItem} showDetails={showDetails} setShowDetails={setShowDetails} lastSelectedItem={lastSelectedItem}/>
                 <DetailsCard className={showDetails !== '' ? 'fade-in-card detailsComponentTop' : 'cardHidden'} title={showDetails}/>
             </header>
-            <h5 className='bottomCredits' >{`© ${getYear()} Jack Bauman  - All rights reserved`}</h5>
+            <h5 className='bottomCredits' >{`© ${getYear()} Jack Bauman`}</h5>
         </div>
     );
 }

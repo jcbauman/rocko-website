@@ -48,7 +48,7 @@ const buttons:Array<{label:string,className?:string,link?:string}> = getButtons(
             </div>
             <div className='roleContainer'>
                 <p className='promptText'>ALBUM ART:</p>
-                <h5 className='imageCreds'>{getImageCredits(props.title)}</h5>
+                <h5>{getImageCredits(props.title)}</h5>
             </div>
              <div className='buttonContainer'>
                     {buttons.map((buttonItem:{label:string,className?:string,link?:string}) => {
