@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+import React, {useState,useEffect} from 'react';
+import { useHistory,useLocation,Route,Router,Switch } from 'react-router-dom';
 import './App.css';
+import {DetailsComponent, RecordComponent, RecordCrateComponent} from "./components";
+import {rightArrow} from "./images";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const records = ['Playwriting','Attic Band','Crate Digger','Graduation','Thesis','KPISS','Beatitude', 'Super 8','Quio'];
+    const [selectedItem,setSelectedItem] = useState(100);
+    const [lastSelectedItem,setLastSelectedItem] = useState(0);
+    const [showDetails,setShowDetails] = useState('');
+
+    useEffect( () =>{
+        if(selectedItem !== 100){setLastSelectedItem(selectedItem);}
+    },[selectedItem]);
+
+
+    const getYPos = (id:number) => {
+        return (id * 40) + (vh / 4);
+    }
+
+    const getYear = () => {
+        return new Date().getFullYear().toString();
+    };
+
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    let history = useHistory();
+    const handleClickArrow = () => {
+        setShowDetails(records[selectedItem]);
+    }
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                {showDetails === '' ? <RecordCrateComponent records={records} selectedItem={selectedItem} setSelectedItem={setSelectedItem} history={history} setShowDetails={setShowDetails} lastSelectedItem={lastSelectedItem}/>
+               :
+                <DetailsComponent title={showDetails}/>}
+            </header>
+            <h5 className='bottomCredits' >{`© ${getYear()} Jack Bauman  - All images are mine, used with permission, or are licensed as Creative Commons. - All rights reserved.`}</h5>
+        </div>
+    );
 }
 
 export default App;

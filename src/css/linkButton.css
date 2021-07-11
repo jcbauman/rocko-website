@@ -1,0 +1,41 @@
+.linkButton{
+    height:40px;
+    border-radius: 20px;
+    cursor:pointer;
+    background-color: darkred;
+    margin: 20px 5px;
+}
+
+.linkSingle{
+    width:60%;
+}
+
+.linkDouble{
+    width:45%;
+}
+
+.linkButton:hover{
+    -webkit-box-shadow:rgba(0,0,0,0.7) 0px 5px 15px, inset rgba(0,0,0,0.15) 0 -10px 20px;
+       -moz-box-shadow:rgba(0,0,0,0.7) 0px 5px 15px, inset rgba(0,0,0,0.15) 0 -10px 20px;
+         -o-box-shadow:rgba(0,0,0,0.7) 0px 5px 15px, inset rgba(0,0,0,0.15) 0 -10px 20px;
+            box-shadow:rgba(0,0,0,0.7) 0px 5px 15px, inset rgba(0,0,0,0.15) 0 -10px 20px;
+}
+
+.linkButton p {
+    color:white;
+    margin:0;
+    padding-top:10px;
+    font-size: 16px;
+}
+
+.spotifyGreen{
+ background-color: #1DB954;
+}
+
+.linkedInBlue{
+    background-color: #0077B5;
+}
+
+.quioBlue{
+    background-color: #51a7db;
+}

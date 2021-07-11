@@ -1,0 +1,67 @@
+.detailsComponent{
+    background-color: antiquewhite;
+    border-radius: 10px;
+    color:black;
+    width:50vw;
+}
+
+.detailsComponent h5,
+.detailsComponent h4,
+.detailsComponent h3,
+.detailsComponent h2,
+.detailsComponent h1
+{
+    font-family: Courier,serif!important;
+    text-align: left;
+    padding:0 5px;
+    margin:0;
+}
+
+.detailsComponent h5{
+    font-weight:normal;
+    font-size: 16px;
+}
+
+.detailsComponent h3{
+    font-size: 24px;
+}
+
+.promptText{
+    font-family: Futura,sans-serif!important;
+    font-size: 10px;
+    float:left;
+    font-weight: bold;
+}
+
+.companyContainer{
+    background-color: whitesmoke;
+    border:1px dotted black;
+    padding:5px;
+}
+
+.roleContainer{
+    background-color: whitesmoke;
+    border:1px dotted black;
+    padding:5px;
+}
+
+.timeContainer{
+    display:flex;
+    flex-direction:row;
+}
+
+.playtimeContainer{
+    width:50%;
+    float:left;
+    background-color: whitesmoke;
+    border:1px dotted black;
+}
+
+.buttonContainer{
+    width:100%;
+    overflow-y:hidden;
+    height:auto;
+    align-content:center;
+    justify-content: center;
+    display: flex;
+ }
