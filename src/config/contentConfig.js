@@ -190,7 +190,7 @@ export const getNotes = (title:string) => {
                 <li>I solo-designed, developed, and maintained an iOS application for a Brooklyn community internet radio station. The app, “KPISS Radio”,
                     is currently available on the App Store with hundreds of monthly active users and 100% 5-star reviews.
                     <li>The app uses Google Calendar API, AVKit, and some web-scraping technology.  I wrote it in Objective-C 👴🏻.</li>
-                    <li> Additionally I host a biweekly soul/funk radio show, “Lunar Rotation."  Listen to it live, or its many archives available online!</li>
+                    <li> Additionally I host a biweekly soul/funk radio show, “Lunar Rotation."  Listen to the next episode live, or browse all the archives available online.</li>
                 </li>
             </ul>);
         case 'Beatitude':
@@ -225,7 +225,7 @@ export const getNotes = (title:string) => {
         case 'Playwriting':
             return (
                 <div className='notesText'>
-                    <p>In my free time, I am an award-winning playwright, with four scripts receiving full productions with student or professional actors.</p>
+                    <h5>In my free time, I am an award-winning playwright, with four scripts receiving full productions with student or professional actors.</h5>
                     <ul>
                         <li>"Bell" (pictured, 2014) - Produced by Berkeley Repertory Theater - A bellboy at a 1930s Hollywood hotel falls in love with a nervous and abused old woman who stays there.</li>
                         <li>"Darling on the Nickel" (2015) - Produced by Playground SF (San Francisco) - A wealthy author discusses the meaning of life with a homeless woman at a bus stop.</li>
@@ -236,7 +236,7 @@ export const getNotes = (title:string) => {
         case 'Scratch':
             return (<ul className='notesText'>
                 <li>In middle school I was working at a carnival and penny arcade museum (Playland-Not-At-The-Beach in El Cerrito).  During this time, I reproduced many of our antique games online, including pinball machines, slot machines, and fortune tellers.</li>
-                <li>Scratch is considered child's play, but I'm proud of a lot of theses.  Plus they're fun to play, See for yourself.</li>
+                <li>Scratch is considered child's play, but I'm proud of a lot of these.  They are fun to play, see for yourself.</li>
             </ul>);
         default:
             return <p>Nothing to see here</p>;

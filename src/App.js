@@ -30,7 +30,7 @@ function App() {
             <header className="App-header">
                 {/*{showDetails === '' ? */}
                     <RecordCrateComponent records={records} selectedItem={selectedItem} setSelectedItem={setSelectedItem} history={history} showDetails={showDetails} setShowDetails={setShowDetails} lastSelectedItem={lastSelectedItem}/>
-                    <DetailsCard className={showDetails !== '' ? 'fade-in-card' : 'cardHidden'} title={showDetails}/>
+                    <DetailsCard className={showDetails !== '' ? 'fade-in-card detailsComponentTop' : 'cardHidden'} title={showDetails}/>
                 {/*:*/}
                 {/* <DetailsComponent title={showDetails} setShowDetails={setShowDetails} setSelectedItem={setSelectedItem} selectedItem={selectedItem}/>}*/}
             </header>

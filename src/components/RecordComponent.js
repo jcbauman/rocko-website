@@ -37,11 +37,11 @@ export default function RecordComponent(props:RecordComponentProps){
     };
 
     const onClickHandler = (id:number) => {
-        if(props.selectedRecord === id){
-            props.setSelectedRecord(100);
-        } else {
-            props.setSelectedRecord(id);
-        }
+            if(props.selectedRecord === id){
+                props.setSelectedRecord(100);
+            } else {
+                props.setSelectedRecord(id);
+            }
     }
 
 
