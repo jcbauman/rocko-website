@@ -22,7 +22,7 @@ const buttons:Array<{label:string,className?:string,link?:string}> = getButtons(
 
 
     return(
-        <div className='detailsComponent'>
+        <div className='detailsComponent fade-in-card'>
             <div className='companyContainer'>
                 <p className='promptText'>COMPANY:</p>
                 <h5>{getCompany(props.title)}</h5>
@@ -37,16 +37,16 @@ const buttons:Array<{label:string,className?:string,link?:string}> = getButtons(
                     <h5>{getYears(props.title)}</h5>
                 </div>
                 <div className='playtimeContainer'>
-                    <p className='promptText'>PLAYTIME:</p>
+                    <p className='promptText'>PLAY TIME:</p>
                     <h5>{getTime(props.title)}</h5>
                 </div>
             </div>
             <div className='roleContainer'>
-                <p className='promptText'>NOTES:</p>
+                <p className='promptText'>LINER NOTES:</p>
                 <h5>{getNotes(props.title)}</h5>
             </div>
             <div className='roleContainer'>
-                <p className='promptText'>IMAGE:</p>
+                <p className='promptText'>ALBUM ART:</p>
                 <h5>{getImageCredits(props.title)}</h5>
             </div>
              <div className='buttonContainer'>

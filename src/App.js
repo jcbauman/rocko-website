@@ -32,7 +32,7 @@ function App() {
                :
                 <DetailsComponent title={showDetails} setShowDetails={setShowDetails} setSelectedItem={setSelectedItem} selectedItem={selectedItem}/>}
             </header>
-            <h5 className='bottomCredits' >{`© ${getYear()} Jack Bauman  - All images are mine, used with permission, or are licensed as Creative Commons. - All rights reserved.`}</h5>
+            <h5 className='bottomCredits' >{`© ${getYear()} Jack Bauman  - All rights reserved.`}</h5>
         </div>
     );
 }

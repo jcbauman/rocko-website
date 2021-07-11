@@ -62,7 +62,7 @@ export const getCompany = (role:string) => {
 export const getButtons = (role:string) => {
     switch(role){
         case 'Attic Band':
-            return [{label:'Listen on Spotify', className:'spotifyGreen',link:'https://open.spotify.com/artist/7EBUZ0QFsDLyYKvq7C97BZ?si=gUT2KcHKQZinyxYvLGZMVw&dl_branch=1'},{label:'Listen on Apple Music', className:'',link:'https://music.apple.com/us/artist/attic-band/1479350842'}];
+            return [{label:'Listen on Spotify', className:'spotifyGreen',link:'https://open.spotify.com/artist/7EBUZ0QFsDLyYKvq7C97BZ?si=gUT2KcHKQZinyxYvLGZMVw&dl_branch=1'},{label:'Listen on Apple Music', className:'appleMusicRed',link:'https://music.apple.com/us/artist/attic-band/1479350842'}];
         case 'Thesis':
             return [{label:'Request Thesis', className:'',link:'mailto:jackrockocasey@gmail.com'}];
         case 'KPISS':
@@ -124,7 +124,7 @@ export const getImageCredits = (title:string) => {
         case 'Super 8':
             return 'Designed by me';
         case 'Graduation':
-            return 'Photo by me';
+            return 'Photo by a relative (under orders)';
         case 'Playwriting':
             return 'Courtesy of Berkeley Rep';
         default:
@@ -160,13 +160,13 @@ export const getTime = (title:string) => {
 export const getNotes = (title:string) => {
     switch(title){
         case 'Attic Band':
-            return (<div>
-                <h5>I served as a co-leader and recording and performance musician (keyboard) for "Attic Band", contributing to every song on our debut album "Obituary," and subsequent singles, available on all streaming platforms.</h5>
+            return (<div className='notesText'>
+                <h5 className='spotifyPadding'>I served as a co-leader and recording and performance musician (keyboard) for "Attic Band", contributing to every song on our debut album "Obituary," and subsequent singles, available on all streaming platforms.</h5>
                 <iframe src="https://open.spotify.com/embed/artist/7EBUZ0QFsDLyYKvq7C97BZ?theme=0" width="100%"
                         height="80" frameBorder="0" allowTransparency="true" allow="encrypted-media"/>
             </div>);
         case 'Thesis':
-            return (<ul>
+            return (<ul className='notesText'>
                 <li>I completed my undergraduate thesis under Steve Whittaker, PhD. and Leyla Takayama, PhD., studying the quantified-self and user
                     interpretation of intelligent systems. (Available upon request)</li>
                 <li>The system I used for my thesis studies was written in Javascript.</li>
@@ -174,7 +174,7 @@ export const getNotes = (title:string) => {
                     experience. Co-authored multiple paper submissions on computing, mental health, and trust and accuracy in AI.</li>
             </ul>);
         case 'KPISS':
-            return (<ul>
+            return (<ul className='notesText'>
                 <li>I solo-designed, developed, and maintained an iOS application for a Brooklyn community internet radio station. The app, “KPISS Radio”,
                     is currently available on the App Store with hundreds of monthly active users and 100% 5-star reviews.
                     <li>The app uses Google Calendar API, AVKit, and some web-scraping technology.  I wrote it in Objective-C 👴🏻.</li>
@@ -182,37 +182,37 @@ export const getNotes = (title:string) => {
                 </li>
             </ul>);
         case 'Beatitude':
-            return (<ul>
+            return (<ul className='notesText'>
                 <li>My first app! I solo-designed, coded, and released an iOS app, "Beatitude," integrating Spotify with maps to create geographic music playlists.</li>
-                <li>The app used MapKit and location monitoring, Spotify's API, Postman, and background processing.  I wrote it in Swift.</li>
+                <li>Beatitude uses MapKit and location monitoring, Spotify's API, Postman, and background processing.  I wrote it in Swift.</li>
             </ul>);
         case 'Crate Digger':
-            return (<ul>
+            return (<ul className='notesText'>
                 <li>I created and served as project leader of a group which designed a Tinder-like music recommendation and statistics app for Android.</li>
-                <li>The app uses the Spotify API.  It's written in Java.</li>
+                <li>Crate Digger uses the Spotify API.  It's written in Java.</li>
             </ul>);
         case 'Quio':
-            return (<ul>
+            return (<ul className='notesText'>
                 <li>For the last two years, I've been working at Quio, a diabetes and chronic care management startup based in Manhattan.</li>
                 <li>I served jointly as a Frontend Developer and later as our head iOS Developer.</li>
-                <li>My tech stack at Quio is extensive, here's a dump: Objective-C, Swift, SwiftUI, Combine, Storyboard, and UIKit.</li>
+                <li>My tech stack at Quio is extensive, here's a taste: Objective-C, Swift, SwiftUI, Combine, Storyboard, and UIKit.</li>
                 <li>For frontend, I used React, Javascript, Typescript, Redux, Mirage, Python, and SQL.</li>
                 <li>For a full list of things I worked on, check out my resume.</li>
             </ul>);
         case 'Super 8':
-            return (<ul>
+            return (<ul className='notesText'>
                 <li>I worked at KZSC Santa Cruz for almost 4 years, hosting weekly soul radio shows 'Super 8', 'Disc Hockey,' and Louisiana music collective 'Lagniappe.' Previous host of jazz radio shows 'Borrowed Beats,' (hip hop) 'Clam Chops,' (jazz funk) and 'Fireside Chat' (30s jazz).</li>
                 <li>At KZSC, I served as our Director of Graphic Design and Volunteer Coordinator.</li>
                 <li>A collection of some of my old Super 8s are available online.</li>
             </ul>);
         case 'Graduation':
-            return (<ul>
+            return (<ul className='notesText'>
                 <li>Graduated UC Santa Cruz with a double major in Computer Science and Cognitive Science B.S.</li>
                 <li>This is my mom, ain't she cool?</li>
             </ul>);
         case 'Playwriting':
             return (
-                <div>
+                <div className='notesText'>
                     <p>In my free time, I am an award-winning playwright, with four scripts receiving full productions with student or professional actors.</p>
                     <ul>
                         <li>"Bell" (pictured, 2014) - Produced by Berkeley Repertory Theater - A bellboy at a 1930s Hollywood hotel falls in love with a nervous and abused old woman who stays there.</li>
@@ -222,7 +222,7 @@ export const getNotes = (title:string) => {
                     </ul>
                 </div>);
         default:
-            return <div></div>;
+            return <p>Nothing to see here</p>;
     }
 };
 
