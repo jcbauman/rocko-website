@@ -220,6 +220,7 @@ export const getNotes = (title:string) => {
         case 'Graduation':
             return (<ul className='notesText'>
                 <li>Graduated UC Santa Cruz with a double major in Computer Science and Cognitive Science B.S.</li>
+                <li>Received the Regents' Scholarship, University of California's highest academic honor.</li>
                 <li>This is my mom, ain't she cool?</li>
             </ul>);
         case 'Playwriting':

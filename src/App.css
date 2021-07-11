@@ -28,6 +28,23 @@
   overflow-y:hidden;
 }
 
+.titleCard{
+  position: absolute;
+  top:10px;
+  left:10px;
+  width:20vw;
+}
+
+.titleCardImg{
+  width:20vw;
+}
+
+.promptExplore{
+  color:white;
+  padding-top: 10px;
+  clear:both;
+}
+
 .bottomCredits{
   position:fixed;
   bottom:5px;

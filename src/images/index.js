@@ -10,6 +10,7 @@ import graduation from './graduation.JPG';
 import rightArrow from './rightArrow.png';
 import berkeleyRep from './berkeleyRep.jpg';
 import penny from './penny.jpeg';
+import rockoTitleCard from './rockoTitleCard.png';
 
 export{
     atticBandAlbum,
@@ -23,5 +24,6 @@ export{
     graduation,
     rightArrow,
     berkeleyRep,
-    penny
+    penny,
+    rockoTitleCard
 };
