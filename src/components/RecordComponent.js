@@ -10,13 +10,22 @@ interface RecordComponentProps{
     id: number;
     setSelectedRecord: any;
     selectedRecord: number;
+    hideRecords?:boolean;
+    chosenRecord?:boolean;
 }
 
 export default function RecordComponent(props:RecordComponentProps){
 
 
-    const getHeight = (id:number) => {
-        return (id * 40) + 20;
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+
+    const getHeight = (id:number, hideRecords:boolean) => {
+        if(props.hideRecords){
+            return (id * (.05 * vh)) + 300;
+        } else if(props.chosenRecord){
+            return 20;
+        }
+        return (id * (.05 * vh)) + 20;
     }
 
     const getZIndex = (type:'image' | 'grit',id:number) => {
@@ -37,9 +46,9 @@ export default function RecordComponent(props:RecordComponentProps){
 
 
     return(
-        <div className={`recordContainer ${(props.id > props.selectedRecord) ? 'recordTipped' : ''}`} style={{top:getHeight(props.id),zIndex:getZIndex('image',props.id)}} onClick={() => onClickHandler(props.id)}>
-            <img className={`gritCover`} style={{zIndex:getZIndex('grit',props.id)}} src={recordSleeve} alt=""/>
-            <img className={`recordImage`} src={getImage(props.title)} alt={props.title}/>
+        <div className={`recordContainer ${(props.id > props.selectedRecord && !props.hideRecords) ? 'recordTipped' : ''} ${props.hideRecords ? 'fade-out-grit' : ''}`} style={{top:getHeight(props.id,props.hideRecords),zIndex:getZIndex('image',props.id)}} onClick={() => onClickHandler(props.id)}>
+            <img className={`gritCover ${props.chosenRecord ? 'fade-out-grit-slow' : ''}`} style={{zIndex:getZIndex('grit',props.id)}} src={recordSleeve} alt=""/>
+            <img className={`recordImage  ${props.chosenRecord ? 'corner-radius-slow' : ''}`} src={getImage(props.title)} alt={props.title}/>
         </div>
     )
 }

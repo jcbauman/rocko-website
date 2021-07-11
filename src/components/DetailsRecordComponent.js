@@ -4,6 +4,7 @@ import {
 } from "../images";
 import {getImage} from '../config/contentConfig';
 import '../css/recordSleeve.css';
+import '../css/detailsComponent.css';
 
 interface RecordComponentProps{
     title: String;
@@ -12,9 +13,10 @@ interface RecordComponentProps{
 
 export default function DetailsRecordComponent(props:RecordComponentProps){
 
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
     const getHeight = (id:number) => {
-        return (id * 40) + 20;
+       return (id * (.05 * vh)) + 20;
     }
 
     const getZIndex = (type:'image' | 'grit',id:number) => {
@@ -28,8 +30,7 @@ export default function DetailsRecordComponent(props:RecordComponentProps){
 
 
     return(
-        <div className={`recordContainer ${(props.id > props.selectedRecord) ? 'recordTipped' : ''}`} style={{top:getHeight(props.id),zIndex:getZIndex('image',props.id),left:500}} >
-            <img className={`gritCover`} style={{zIndex:getZIndex('grit',props.id)}} src={recordSleeve} alt=""/>
+        <div className={`recordContainer`} style={{top:getHeight(props.id),zIndex:getZIndex('image',props.id),left:500}} >
             <img className={`recordImage`} src={getImage(props.title)} alt={props.title}/>
         </div>
     )

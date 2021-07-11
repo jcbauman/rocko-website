@@ -9,13 +9,13 @@ interface RecordCrateProps{
     records:Array;
     selectedItem:any;
     setSelectedItem:any;
-    history:any;
+    showDetails:any;
     setShowDetails:any;
     lastSelectedItem:any;
 }
 
 export default function RecordCrateComponent(props:RecordCrateProps){
-    const{records,selectedItem,setSelectedItem,history,setShowDetails,lastSelectedItem} = props;
+    const{records,selectedItem,setSelectedItem,showDetails,setShowDetails,lastSelectedItem} = props;
     const getYPos = (id:number) => {
         return (id * 40) + (vh / 4);
     };
@@ -29,9 +29,9 @@ export default function RecordCrateComponent(props:RecordCrateProps){
         <div className='recordBin'>
             {records.map((title: String, index) =>
                 (<RecordComponent key={`${title}-record`} title={title} id={index}
-                                  selectedRecord={selectedItem} setSelectedRecord={setSelectedItem}/>)
+                                  selectedRecord={selectedItem} setSelectedRecord={setSelectedItem} chosenRecord={(showDetails !== '' && showDetails === title)} hideRecords={(showDetails !== '' && showDetails !== title)}/>)
             )}
-            {<img className={`rightArrow ${selectedItem === 100 ? 'rightArrowHidden' : ''}`}
+            {<img className={`rightArrow ${selectedItem === 100 || showDetails !== '' ? 'rightArrowHidden' : ''}`}
                   onClick={handleClickArrow} src={rightArrow} alt='right arrow'
                   style={{top: getYPos(selectedItem === 100 ? lastSelectedItem : selectedItem)}}/>}
         </div>

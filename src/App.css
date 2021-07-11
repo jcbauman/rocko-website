@@ -53,6 +53,7 @@
   right:calc(43vw - 25vh);
   transition:.5s;
   box-shadow: darkslategray;
+  z-index: 100;
 }
 
 .rightArrow:hover{

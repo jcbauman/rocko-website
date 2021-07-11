@@ -28,9 +28,11 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                {showDetails === '' ? <RecordCrateComponent records={records} selectedItem={selectedItem} setSelectedItem={setSelectedItem} history={history} setShowDetails={setShowDetails} lastSelectedItem={lastSelectedItem}/>
-               :
-                <DetailsComponent title={showDetails} setShowDetails={setShowDetails} setSelectedItem={setSelectedItem} selectedItem={selectedItem}/>}
+                {/*{showDetails === '' ? */}
+                    <RecordCrateComponent records={records} selectedItem={selectedItem} setSelectedItem={setSelectedItem} history={history} showDetails={showDetails} setShowDetails={setShowDetails} lastSelectedItem={lastSelectedItem}/>
+
+                {/*:*/}
+                {/* <DetailsComponent title={showDetails} setShowDetails={setShowDetails} setSelectedItem={setSelectedItem} selectedItem={selectedItem}/>}*/}
             </header>
             <h5 className='bottomCredits' >{`© ${getYear()} Jack Bauman  - All rights reserved`}</h5>
         </div>

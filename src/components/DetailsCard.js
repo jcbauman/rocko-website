@@ -37,7 +37,7 @@ const buttons:Array<{label:string,className?:string,link?:string}> = getButtons(
                     <h5>{getYears(props.title)}</h5>
                 </div>
                 <div className='playtimeContainer'>
-                    <p className='promptText'>PLAY TIME:</p>
+                    <p className='promptText'>TIME:</p>
                     <h5>{getTime(props.title)}</h5>
                 </div>
             </div>
