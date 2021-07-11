@@ -1,11 +1,15 @@
 import RecordComponent from "./RecordComponent";
-import DetailsComponent from "./DetailsComponent";
+import DetailsCard from "./DetailsCard";
 import LinkButton from "./LinkButton";
 import RecordCrateComponent from "./RecordCrateComponent";
+import DetailsComponent from "./DetailsComponent";
+import DetailsRecordComponent from './DetailsRecordComponent';
 
 export {
     RecordComponent,
-    DetailsComponent,
+    DetailsCard,
     LinkButton,
-    RecordCrateComponent
+    RecordCrateComponent,
+    DetailsComponent,
+    DetailsRecordComponent
 }

@@ -41,7 +41,6 @@
 .rightArrowHidden{
   transform:scale(0);
   opacity: 0;
-  /*right:calc(43vw - 25vh + 20px)!important;*/
   pointer-events: none;
 }
 

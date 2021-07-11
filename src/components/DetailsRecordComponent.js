@@ -8,11 +8,9 @@ import '../css/recordSleeve.css';
 interface RecordComponentProps{
     title: String;
     id: number;
-    setSelectedRecord: any;
-    selectedRecord: number;
 }
 
-export default function RecordComponent(props:RecordComponentProps){
+export default function DetailsRecordComponent(props:RecordComponentProps){
 
 
     const getHeight = (id:number) => {
@@ -27,17 +25,10 @@ export default function RecordComponent(props:RecordComponentProps){
         }
     };
 
-    const onClickHandler = (id:number) => {
-        if(props.selectedRecord === id){
-            props.setSelectedRecord(100);
-        } else {
-            props.setSelectedRecord(id);
-        }
-    }
 
 
     return(
-        <div className={`recordContainer ${(props.id > props.selectedRecord) ? 'recordTipped' : ''}`} style={{top:getHeight(props.id),zIndex:getZIndex('image',props.id)}} onClick={() => onClickHandler(props.id)}>
+        <div className={`recordContainer ${(props.id > props.selectedRecord) ? 'recordTipped' : ''}`} style={{top:getHeight(props.id),zIndex:getZIndex('image',props.id),left:500}} >
             <img className={`gritCover`} style={{zIndex:getZIndex('grit',props.id)}} src={recordSleeve} alt=""/>
             <img className={`recordImage`} src={getImage(props.title)} alt={props.title}/>
         </div>

@@ -1,8 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import { useHistory,useLocation,Route,Router,Switch } from 'react-router-dom';
 import './App.css';
-import {DetailsComponent, RecordComponent, RecordCrateComponent} from "./components";
-import {rightArrow} from "./images";
+import {DetailsComponent, RecordCrateComponent} from "./components";
 
 function App() {
     const records = ['Playwriting','Attic Band','Crate Digger','Graduation','Thesis','KPISS','Beatitude', 'Super 8','Quio'];
@@ -25,16 +24,13 @@ function App() {
 
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
     let history = useHistory();
-    const handleClickArrow = () => {
-        setShowDetails(records[selectedItem]);
-    }
 
     return (
         <div className="App">
             <header className="App-header">
                 {showDetails === '' ? <RecordCrateComponent records={records} selectedItem={selectedItem} setSelectedItem={setSelectedItem} history={history} setShowDetails={setShowDetails} lastSelectedItem={lastSelectedItem}/>
                :
-                <DetailsComponent title={showDetails}/>}
+                <DetailsComponent title={showDetails} setShowDetails={setShowDetails} setSelectedItem={setSelectedItem} selectedItem={selectedItem}/>}
             </header>
             <h5 className='bottomCredits' >{`© ${getYear()} Jack Bauman  - All images are mine, used with permission, or are licensed as Creative Commons. - All rights reserved.`}</h5>
         </div>

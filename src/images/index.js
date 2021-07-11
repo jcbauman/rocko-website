@@ -8,7 +8,7 @@ import quioHealthLogo from './quioHealthLogo.png';
 import super8Logo from './super8.png';
 import graduation from './graduation.JPG';
 import rightArrow from './rightArrow.png';
-import berkeleyRep from './berkeleyRep.png';
+import berkeleyRep from './berkeleyRep.jpg';
 
 export{
     atticBandAlbum,

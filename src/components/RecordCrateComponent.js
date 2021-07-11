@@ -23,10 +23,6 @@ export default function RecordCrateComponent(props:RecordCrateProps){
         setShowDetails(records[selectedItem]);
     };
 
-    const getYear = () => {
-        return new Date().getFullYear().toString();
-    };
-
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
     return(
