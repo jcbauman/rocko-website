@@ -2,7 +2,7 @@ import {
     atticBandAlbum,
     beatitudeLogo, berkeleyRep,
     crateDiggerLogo, graduation,
-    kpissRadio,
+    kpissRadio, penny,
     quioHealthLogo,
     super8Logo,
     thesisImage
@@ -29,6 +29,8 @@ export const getTitle = (role:string) => {
             return 'Graduate';
         case 'Playwriting':
             return 'Playwright'
+        case 'Scratch':
+            return 'Games Developer'
         default:
             return '';
     }
@@ -54,6 +56,8 @@ export const getCompany = (role:string) => {
             return 'University of California, Santa Cruz';
         case 'Playwriting':
             return 'Berkeley Repertory Theater & Others';
+        case 'Scratch':
+            return 'thevaudevillehouse'
         default:
             return '';
     }
@@ -77,6 +81,8 @@ export const getButtons = (role:string) => {
             return [{label:'Listen to Super 8 Archives', className:'', link: 'https://www.mixcloud.com/djrockonyc/'}];
         case 'Graduation':
             return [{label:'Connect with Me', className:'linkedInBlue',link:'https://www.linkedin.com/in/jackcaseybauman/'}];
+        case 'Scratch':
+            return [{label:'Play some old games', className: 'scratchOrange',link:'https://scratch.mit.edu/users/thevaudevillehouse/'}]
         default:
             return [];
     }
@@ -102,6 +108,8 @@ export const getYears = (title:string) => {
             return 'June 2019';
         case 'Playwriting':
             return '2014 - 2018';
+        case 'Scratch':
+            return '2010 - present'
         default:
             return [];
     }
@@ -127,6 +135,8 @@ export const getImageCredits = (title:string) => {
             return 'Photo by a relative (under orders)';
         case 'Playwriting':
             return 'Courtesy of Berkeley Rep';
+        case 'Scratch':
+            return 'Creative Commons Licensed';
         default:
             return [];
     }
@@ -152,6 +162,8 @@ export const getTime = (title:string) => {
             return '4 years';
         case 'Playwriting':
             return '4 years';
+            case 'Scratch':
+            return '11+ years';
         default:
             return [];
     }
@@ -193,7 +205,7 @@ export const getNotes = (title:string) => {
             </ul>);
         case 'Quio':
             return (<ul className='notesText'>
-                <li>For the last two years, I've been working at Quio, a diabetes and chronic care management startup based in Manhattan.</li>
+                <li>My real job. For the last two years, I've been working full-time at Quio Technologies, a diabetes and chronic care management startup based in Manhattan.</li>
                 <li>I served jointly as a Frontend Developer and later as our head iOS Developer.</li>
                 <li>My tech stack at Quio is extensive, here's a taste: Objective-C, Swift, SwiftUI, Combine, Storyboard, and UIKit.</li>
                 <li>For frontend, I used React, Javascript, Typescript, Redux, Mirage, Python, and SQL.</li>
@@ -221,6 +233,11 @@ export const getNotes = (title:string) => {
                         <li>"The Rubies of Mokarar" (2017) - Produced by UCSC Chautauqua - A barista in 1920s Trieste is embroiled in a murderous scheme to steal Ethiopian jewels from an old one-armed Italian army veteran.  I wrote this in Shakespearean pentameter and rhyme.</li>
                     </ul>
                 </div>);
+        case 'Scratch':
+            return (<ul className='notesText'>
+                <li>In middle school I was working at a carnival and penny arcade museum (Playland-Not-At-The-Beach in El Cerrito).  During this time, I reproduced many of our antique games online, including pinball machines, slot machines, and fortune tellers.</li>
+                <li>Scratch is considered child's play, but I'm proud of a lot of theses.  Plus they're fun to play, See for yourself.</li>
+            </ul>);
         default:
             return <p>Nothing to see here</p>;
     }
@@ -246,6 +263,8 @@ export const getImage = (title:string) => {
             return graduation;
         case 'Playwriting':
             return berkeleyRep;
+        case 'Scratch':
+            return penny;
         default:
             return atticBandAlbum;
     }

@@ -9,6 +9,7 @@ import super8Logo from './super8.png';
 import graduation from './graduation.JPG';
 import rightArrow from './rightArrow.png';
 import berkeleyRep from './berkeleyRep.jpg';
+import penny from './penny.jpeg';
 
 export{
     atticBandAlbum,
@@ -21,5 +22,6 @@ export{
     super8Logo,
     graduation,
     rightArrow,
-    berkeleyRep
+    berkeleyRep,
+    penny
 };

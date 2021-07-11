@@ -4,7 +4,7 @@ import './App.css';
 import {DetailsComponent, RecordCrateComponent} from "./components";
 
 function App() {
-    const records = ['Playwriting','Attic Band','Crate Digger','Graduation','Thesis','KPISS','Beatitude', 'Super 8','Quio'];
+    const records = ['Scratch','Playwriting','Graduation','Attic Band','Crate Digger','Thesis','KPISS', 'Super 8','Quio','Beatitude'];
     const [selectedItem,setSelectedItem] = useState(100);
     const [lastSelectedItem,setLastSelectedItem] = useState(0);
     const [showDetails,setShowDetails] = useState('');
@@ -32,7 +32,7 @@ function App() {
                :
                 <DetailsComponent title={showDetails} setShowDetails={setShowDetails} setSelectedItem={setSelectedItem} selectedItem={selectedItem}/>}
             </header>
-            <h5 className='bottomCredits' >{`© ${getYear()} Jack Bauman  - All rights reserved.`}</h5>
+            <h5 className='bottomCredits' >{`© ${getYear()} Jack Bauman  - All rights reserved`}</h5>
         </div>
     );
 }
