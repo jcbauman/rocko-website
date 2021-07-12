@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    recordSleeve, rightArrow,
+    rightArrow,
 } from "../images";
 import '../css/recordSleeve.css';
 import {RecordComponent} from "./index";

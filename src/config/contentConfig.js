@@ -149,13 +149,13 @@ export const getTime = (title:string) => {
         case 'Thesis':
             return '2 years, 9 months';
         case 'KPISS':
-            return '2+ years';
+            return 'About 2 years';
         case 'Beatitude':
             return '3 months'
         case 'Crate Digger':
             return '3 months';
         case 'Quio':
-            return '2+ years'
+            return 'About 2 years'
         case 'Super 8':
             return '3 years, 8 months';
         case 'Graduation':
@@ -174,7 +174,7 @@ export const getNotes = (title:string) => {
         case 'Attic Band':
             return (<div className='notesText'>
                 <h5 className='spotifyPadding'>I served as a co-leader and recording and performance musician (keyboard) for "Attic Band", contributing to every song on our debut album "Obituary," and subsequent singles, available on all streaming platforms.</h5>
-                <iframe src="https://open.spotify.com/embed/artist/7EBUZ0QFsDLyYKvq7C97BZ?theme=0" width="100%"
+                <iframe title="Attic Band Tracks" src="https://open.spotify.com/embed/artist/7EBUZ0QFsDLyYKvq7C97BZ?theme=0" width="100%"
                         height="80" frameBorder="0" allowTransparency="true" allow="encrypted-media"/>
             </div>);
         case 'Thesis':
@@ -200,8 +200,8 @@ export const getNotes = (title:string) => {
             </ul>);
         case 'Crate Digger':
             return (<ul className='notesText'>
-                <li>I created and served as project leader of a group which designed a Tinder-like music recommendation and statistics app for Android.</li>
-                <li>Crate Digger uses the Spotify API.  It's written in Java.</li>
+                <li>I created and served as project leader of a group which designed a Tinder-like music recommendation app for Android.</li>
+                <li>Crate Digger uses the Spotify API and employed a psuedo-Markov model to track user genre preferences to suggest new songs.  It's written in Java.</li>
             </ul>);
         case 'Quio':
             return (<ul className='notesText'>
@@ -237,7 +237,7 @@ export const getNotes = (title:string) => {
         case 'Scratch':
             return (<ul className='notesText'>
                 <li>In middle school I was working at a carnival and penny arcade museum (Playland-Not-At-The-Beach in El Cerrito).  During this time, I reproduced many of our antique games online, including pinball machines, slot machines, and fortune tellers.</li>
-                <li>Scratch is considered child's play, but I'm proud of a lot of these.  They are fun to play, see for yourself.</li>
+                <li>While some may consider Scratch child's play, I'm proud of a lot of these.  Some are even fun to play! see for yourself.</li>
             </ul>);
         default:
             return <p>Nothing to see here</p>;

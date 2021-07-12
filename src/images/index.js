@@ -11,7 +11,8 @@ import rightArrow from './rightArrow.png';
 import berkeleyRep from './berkeleyRep.jpg';
 import penny from './penny.jpeg';
 import rockoTitleCard from './rockoTitleCard.png';
-
+import linkedInLogo from './linkedInLogo.png'
+;
 export{
     atticBandAlbum,
     recordSleeve,
@@ -25,5 +26,6 @@ export{
     rightArrow,
     berkeleyRep,
     penny,
-    rockoTitleCard
+    rockoTitleCard,
+    linkedInLogo
 };

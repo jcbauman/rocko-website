@@ -1,10 +1,10 @@
 import React, {useState,useEffect} from 'react';
 import './App.css';
 import {DetailsCard, MobileModal, RecordCrateComponent} from "./components";
-import {rockoTitleCard} from "./images";
+import {linkedInLogo, rockoTitleCard} from "./images";
 
 function App() {
-    const records = ['Scratch','Playwriting','Graduation','Attic Band','Crate Digger','Thesis','KPISS', 'Super 8','Quio','Beatitude'];
+    const records = ['Scratch','Playwriting','Graduation','Attic Band','Crate Digger','Thesis', 'Super 8','KPISS','Quio','Beatitude'];
     const [selectedItem,setSelectedItem] = useState(100);
     const [lastSelectedItem,setLastSelectedItem] = useState(0);
     const [showDetails,setShowDetails] = useState('');
@@ -28,6 +28,7 @@ function App() {
                 <DetailsCard className={showDetails !== '' ? 'fade-in-card detailsComponentTop' : 'cardHidden'} title={showDetails}/>
             </header>
             <h5 className='bottomCredits' >{`© ${getYear()} Jack Bauman`}</h5>
+            <img className='linkedInButton' src={linkedInLogo} alt={linkedInLogo} onClick={()=>window.open('https://www.linkedin.com/in/jackcaseybauman/')}/>
         </div>
     );
 }
