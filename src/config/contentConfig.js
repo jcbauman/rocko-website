@@ -132,7 +132,7 @@ export const getImageCredits = (title:string) => {
         case 'Super 8':
             return 'Designed by me';
         case 'Graduation':
-            return 'Photo by a relative (under orders)';
+            return 'Photo by a Maeve Regis Photography (maeveregis.com)';
         case 'Playwriting':
             return 'Courtesy of Berkeley Rep';
         case 'Scratch':
