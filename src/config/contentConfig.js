@@ -237,7 +237,7 @@ export const getNotes = (title:string) => {
         case 'Scratch':
             return (<ul className='notesText'>
                 <li>In middle school I was working at a carnival and penny arcade museum (Playland-Not-At-The-Beach in El Cerrito).  During this time, I reproduced many of our antique games online, including pinball machines, slot machines, and fortune tellers.</li>
-                <li>While some may consider Scratch child's play, I'm proud of a lot of these.  Some are even fun to play! see for yourself.</li>
+                <li>While some may consider Scratch child's play, I'm proud of a lot of these.  Some are even fun to play! See for yourself.</li>
             </ul>);
         default:
             return <p>Nothing to see here</p>;
