@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/detailsComponent.css';
 import {LinkButton} from "./LinkButton";
-import { DetailsButton, RoleDetails, Roles } from '../types';
+import {  RoleDetails, Roles } from '../types';
 import {ROLE_COLLECTION} from '../config/contentConfig'
 
 interface DetailsCardProps{
@@ -38,7 +38,7 @@ const config:RoleDetails = ROLE_COLLECTION[title]
             </div>
             <div className='roleContainer'>
                 <p className='promptText'>ALBUM ART:</p>
-                <h5>{config?.image}</h5>
+                <h5>{config?.imageCredits}</h5>
             </div>
              <div className='buttonContainer'>
                     {config?.buttons.map((buttonItem:{label:string,className?:string,link?:string}) => {

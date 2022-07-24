@@ -31,7 +31,7 @@ export const RecordCrateComponent: React.FC<RecordCrateProps> = ({records,select
 
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
-    return(
+    return (
         <div className='recordBin'>
             {records.map((title: Roles, index) =>
                 (<RecordComponent key={`${title}-record`} title={title} id={index}
@@ -43,6 +43,6 @@ export const RecordCrateComponent: React.FC<RecordCrateProps> = ({records,select
             {!isCrateMode ? <img className={`rightArrowDetails turn-opposite-direction`}
                   onClick={handleCloseArrow} src={rightArrow} alt='back arrow'
                   /> : ''}
-        </div>
+            </div>
     )
 }

@@ -2,12 +2,11 @@ import {
     atticBandAlbum,
     beatitudeLogo, berkeleyRep,
     crateDiggerLogo, flowcodelogo, graduation,
-    kpissRadio, penny,
+    kpissRadio,
     quioHealthLogo,
     super8Logo,
     thesisImage
 } from "../images";
-import React from 'react';
 import { RoleDetails, Roles } from "../types";
 
 export const PRIORITY_LIST = [Roles.PLAYS, Roles.UCSC, Roles.ATTIC, Roles.CRATE, Roles.THESIS, Roles.KZSC, Roles.KPISS, Roles.QUIO, Roles.FLOWCODE,  Roles.BEATITUDE]
@@ -48,7 +47,7 @@ const getNotes:any = (title:Roles) => {
             </ul>);
         case Roles.QUIO:
             return (<ul className='notesText'>
-                <li>My real job. For the last two years, I've been working full-time at Quio Technologies, a diabetes and chronic care management startup based in Manhattan.</li>
+                <li>My previous gig. For 2 years, I worked full-time at Quio Technologies, a diabetes and chronic care management startup based in Manhattan.</li>
                 <li>I served jointly as a Frontend Developer and later as our head iOS Developer.</li>
                 <li>My tech stack at Quio is extensive, here's a taste: Objective-C, Swift, SwiftUI, Combine, Storyboard, and UIKit.</li>
                 <li>For frontend, I used React, Javascript, Typescript, Redux, Mirage, Python, and SQL.</li>
@@ -77,6 +76,13 @@ const getNotes:any = (title:Roles) => {
                         <li>"The Rubies of Mokarar" (2017) - Produced by UCSC Chautauqua - A barista in 1920s Trieste is embroiled in a murderous scheme to steal Ethiopian jewels from an old one-armed Italian army veteran.  I wrote this in Shakespearean pentameter and rhyme.</li>
                     </ul>
                 </div>);
+        case Roles.FLOWCODE:
+            return (<ul className='notesText'>
+                <li>My real job. I serve as a Frontend Developer at Flowcode, the offline to online company, working on the Core team.</li>
+                <li>I work all over the company, with an emphasis on their Flowpage and Flowcode QR product suite.</li>
+                <li>For frontend, I use Next, React, Typescript, Jest, and GraphQL.</li>
+            </ul> 
+            )
         default:
             return <p>Nothing to see here</p>;
     }
@@ -95,7 +101,7 @@ export const ROLE_COLLECTION: {[value in Roles]:RoleDetails} = {
     },
     [Roles.THESIS]: { title: 'Research Assistant',
     company: 'UCSC Human Computer Interaction Lab',
-    buttons: [{label:'Request Thesis', className:'',link:'mailto:jackrockocasey@gmail.com'}],
+    buttons: [{label:'Request Thesis', className:'',link:'mailto:jackrockocasey@gmail.com?subject=Request for Senior Thesis'}],
     yearsActive: 'Dec 2016 - Aug 2019',
     duration:'2 years, 9 months',
     imageCredits: 'Creative Commons Licensed',
@@ -158,7 +164,7 @@ export const ROLE_COLLECTION: {[value in Roles]:RoleDetails} = {
     },
        [Roles.PLAYS]: { title: 'Playwright',
     company: 'Berkeley Repertory Theater & Others',
-    buttons: [{label:'Previous Shows', className:'',link:'https://jcbauman.portfoliobox.net/playwriting'}],
+    buttons: [{label:'Dig some plays', className:'',link:'https://jcbauman.portfoliobox.net/playwriting'}],
     yearsActive: '2014 - 2018',
     duration:'4 years',
     imageCredits: 'Courtesy of Berkeley Rep',
@@ -167,7 +173,7 @@ export const ROLE_COLLECTION: {[value in Roles]:RoleDetails} = {
     },
         [Roles.FLOWCODE]: { title: 'Frontend Developer',
     company: 'Flowcode',
-    buttons: [{label:'Flowcode Wesbite', className:'',link:'https://flowcode.com'}],
+    buttons: [{label:'Flowcode Website', className:'flowcodeBlack',link:'https://flowcode.com'}],
     yearsActive: '2021 - present',
     duration:'1 year+',
     imageCredits: 'Courtesy of Flowcode',

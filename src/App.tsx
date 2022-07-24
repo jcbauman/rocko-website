@@ -40,7 +40,7 @@ function App() {
                 <RecordCrateComponent records={PRIORITY_LIST} selectedItem={selectedItem} setSelectedItem={setSelectedItem} isCrateMode={isCrateMode}  closeRecord={closeRecord} showDetails={showDetails} openRecord={openRecord} lastSelectedItem={lastSelectedItem}/>
                 <DetailsCard className={!isCrateMode ? 'fade-in-card detailsComponentTop' : 'cardHidden'} title={showDetails}/>
             </header>
-            <h5 className='bottomCredits' >{`© ${getYear()} Jack Bauman`}</h5>
+            <h5 className='bottomCredits' >{`© ${getYear()} Rocko Bauman`}</h5>
             <img className='linkedInButton' src={linkedInLogo} alt={linkedInLogo} onClick={()=>window.open('https://www.linkedin.com/in/jackcaseybauman/')}/>
         </div>
     );
