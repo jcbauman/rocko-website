@@ -12,7 +12,8 @@ import berkeleyRep from './berkeleyRep.jpg';
 import penny from './penny.jpeg';
 import rockoTitleCard from './rockoTitleCard.png';
 import linkedInLogo from './linkedInLogo.png'
-;
+import flowcodelogo from './flowcode.jpg'
+
 export{
     atticBandAlbum,
     recordSleeve,
@@ -27,5 +28,6 @@ export{
     berkeleyRep,
     penny,
     rockoTitleCard,
-    linkedInLogo
+    linkedInLogo,
+    flowcodelogo
 };

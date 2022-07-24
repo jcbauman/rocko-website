@@ -1,11 +1,8 @@
 import React from 'react';
 import '../css/mobileModal.css';
-import {graduation} from "../images";
-interface MobileModalProps{
+import { graduation } from "../images";
 
-}
-
-export default function MobileModal(props:MobileModalProps){
+export const MobileModal = () => {
 
     return(
         <div className='mobileModal'>
