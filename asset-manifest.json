@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.51162b72.chunk.css",
-    "main.js": "/static/js/main.5b8bb667.chunk.js",
-    "main.js.map": "/static/js/main.5b8bb667.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.66da5495.js",
-    "runtime-main.js.map": "/static/js/runtime-main.66da5495.js.map",
-    "static/js/2.a3d40f98.chunk.js": "/static/js/2.a3d40f98.chunk.js",
-    "static/js/2.a3d40f98.chunk.js.map": "/static/js/2.a3d40f98.chunk.js.map",
-    "static/js/3.588087d8.chunk.js": "/static/js/3.588087d8.chunk.js",
-    "static/js/3.588087d8.chunk.js.map": "/static/js/3.588087d8.chunk.js.map",
+    "main.css": "/static/css/main.a9c87f0c.chunk.css",
+    "main.js": "/static/js/main.9aeeae69.chunk.js",
+    "main.js.map": "/static/js/main.9aeeae69.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ca54e7eb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ca54e7eb.js.map",
+    "static/js/2.a92f2f60.chunk.js": "/static/js/2.a92f2f60.chunk.js",
+    "static/js/2.a92f2f60.chunk.js.map": "/static/js/2.a92f2f60.chunk.js.map",
+    "static/js/3.3e79bb01.chunk.js": "/static/js/3.3e79bb01.chunk.js",
+    "static/js/3.3e79bb01.chunk.js.map": "/static/js/3.3e79bb01.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.51162b72.chunk.css.map": "/static/css/main.51162b72.chunk.css.map",
-    "static/js/2.a3d40f98.chunk.js.LICENSE.txt": "/static/js/2.a3d40f98.chunk.js.LICENSE.txt",
+    "static/css/main.a9c87f0c.chunk.css.map": "/static/css/main.a9c87f0c.chunk.css.map",
+    "static/js/2.a92f2f60.chunk.js.LICENSE.txt": "/static/js/2.a92f2f60.chunk.js.LICENSE.txt",
     "static/media/atticBandAlbum.116ab11c.jpeg": "/static/media/atticBandAlbum.116ab11c.jpeg",
     "static/media/beatitudeLogo.6a4e3aa2.png": "/static/media/beatitudeLogo.6a4e3aa2.png",
     "static/media/berkeleyRep.f401917b.jpg": "/static/media/berkeleyRep.f401917b.jpg",
     "static/media/crateDigger.0ab9bd44.png": "/static/media/crateDigger.0ab9bd44.png",
+    "static/media/flowcode.f69b20a7.jpg": "/static/media/flowcode.f69b20a7.jpg",
     "static/media/graduation.4fc39fa2.JPG": "/static/media/graduation.4fc39fa2.JPG",
     "static/media/kpissRadio.9fb0f9dc.jpeg": "/static/media/kpissRadio.9fb0f9dc.jpeg",
     "static/media/penny.24cb83bf.jpeg": "/static/media/penny.24cb83bf.jpeg",
@@ -26,9 +27,9 @@
     "static/media/super8.b0f948bf.png": "/static/media/super8.b0f948bf.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.66da5495.js",
-    "static/js/2.a3d40f98.chunk.js",
-    "static/css/main.51162b72.chunk.css",
-    "static/js/main.5b8bb667.chunk.js"
+    "static/js/runtime-main.ca54e7eb.js",
+    "static/js/2.a92f2f60.chunk.js",
+    "static/css/main.a9c87f0c.chunk.css",
+    "static/js/main.9aeeae69.chunk.js"
   ]
 }
