@@ -32,6 +32,7 @@ function App() {
 
     return (
         <div className="App">
+            <h1 className='hidden'>Jack Rocko Bauman Resume and Portfoilio</h1>
             <MobileModal/>
             <div className='titleCard'>
                 <img className='titleCardImg' src={rockoTitleCard} alt='rocko title'/>
