@@ -1,59 +1,49 @@
 import React from 'react';
 import '../css/detailsComponent.css';
-import {
-    getImage,
-    getYears,
-    getButtons,
-    getCompany,
-    getTitle,
-    getTime,
-    getNotes,
-    getImageCredits
-} from "../config/contentConfig";
-import {LinkButton} from "../components";
-import {useState, useEffect} from 'react';
+import {LinkButton} from "./LinkButton";
+import {  RoleDetails, Roles } from '../types';
+import {ROLE_COLLECTION} from '../config/contentConfig'
 
 interface DetailsCardProps{
-    title: String;
+    title: Roles;
     className:any;
 }
 
-export default function DetailsCard(props:DetailsCardProps){
-const buttons:Array<{label:string,className?:string,link?:string}> = getButtons(props.title);
-
+export const DetailsCard: React.FC<DetailsCardProps> = ({ title, className }) => {
+const config:RoleDetails = ROLE_COLLECTION[title]
 
     return(
-        <div className={`detailsComponent ${props.className}`}>
+        <div className={`detailsComponent ${className}`}>
             <div className='companyContainer'>
                 <p className='promptText'>COMPANY:</p>
-                <h5>{getCompany(props.title)}</h5>
+                <h5>{config?.company}</h5>
             </div>
             <div className='roleContainer'>
                 <p className='promptText'>ROLE:</p>
-                <h3>{getTitle(props.title)}</h3>
+                <h3>{config?.title}</h3>
             </div>
             <div className='timeContainer'>
                 <div className='playtimeContainer'>
                     <p className='promptText'>YEARS:</p>
-                    <h5>{getYears(props.title)}</h5>
+                    <h5>{config?.yearsActive}</h5>
                 </div>
                 <div className='playtimeContainer'>
                     <p className='promptText'>TIME:</p>
-                    <h5>{getTime(props.title)}</h5>
+                    <h5>{config?.duration}</h5>
                 </div>
             </div>
             <div className='roleContainer'>
                 <p className='promptText'>LINER NOTES:</p>
-                <h5>{getNotes(props.title)}</h5>
+                <h5>{config?.notes}</h5>
             </div>
             <div className='roleContainer'>
                 <p className='promptText'>ALBUM ART:</p>
-                <h5>{getImageCredits(props.title)}</h5>
+                <h5>{config?.imageCredits}</h5>
             </div>
              <div className='buttonContainer'>
-                    {buttons.map((buttonItem:{label:string,className?:string,link?:string}) => {
+                    {config?.buttons.map((buttonItem:{label:string,className?:string,link?:string}) => {
                         return <LinkButton
-                            className={buttonItem.className + (buttons.length > 1 ? ' linkDouble' : ' linkSingle')}
+                            className={buttonItem.className + (config.buttons.length > 1 ? ' linkDouble' : ' linkSingle')}
                             label={buttonItem.label} link={buttonItem.link}/>;
                     })}
                 </div>
