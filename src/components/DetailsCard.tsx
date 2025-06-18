@@ -1,53 +1,157 @@
-import React from 'react';
-import '../css/detailsComponent.css';
-import {LinkButton} from "./LinkButton";
-import {  RoleDetails, Roles } from '../types';
-import {ROLE_COLLECTION} from '../config/contentConfig'
+import React, { FC } from "react";
+import "../css/detailsComponent.css";
+import { LinkButton } from "./LinkButton";
+import { RoleDetails, Roles } from "../types";
+import { ROLE_COLLECTION } from "../config/contentConfig";
+import { Stack, Typography } from "@mui/material";
 
-interface DetailsCardProps{
-    title: Roles;
-    className:any;
+interface DetailsCardProps {
+  title: Roles;
+  className: any;
 }
 
-export const DetailsCard: React.FC<DetailsCardProps> = ({ title, className }) => {
-const config:RoleDetails = ROLE_COLLECTION[title]
+export const DetailsCard: React.FC<DetailsCardProps> = ({
+  title,
+  className,
+}) => {
+  const config: RoleDetails = ROLE_COLLECTION[title];
 
-    return(
-        <div className={`detailsComponent ${className}`}>
-            <div className='companyContainer'>
-                <p className='promptText'>COMPANY:</p>
-                <h5>{config?.company}</h5>
-            </div>
-            <div className='roleContainer'>
-                <p className='promptText'>ROLE:</p>
-                <h3>{config?.title}</h3>
-            </div>
-            <div className='timeContainer'>
-                <div className='playtimeContainer'>
-                    <p className='promptText'>YEARS:</p>
-                    <h5>{config?.yearsActive}</h5>
-                </div>
-                <div className='playtimeContainer'>
-                    <p className='promptText'>TIME:</p>
-                    <h5>{config?.duration}</h5>
-                </div>
-            </div>
-            <div className='roleContainer'>
-                <p className='promptText'>LINER NOTES:</p>
-                <h5>{config?.notes}</h5>
-            </div>
-            <div className='roleContainer'>
-                <p className='promptText'>ALBUM ART:</p>
-                <h5>{config?.imageCredits}</h5>
-            </div>
-             <div className='buttonContainer'>
-                    {config?.buttons.map((buttonItem:{label:string,className?:string,link?:string}) => {
-                        return <LinkButton
-                            className={buttonItem.className + (config.buttons.length > 1 ? ' linkDouble' : ' linkSingle')}
-                            label={buttonItem.label} link={buttonItem.link}/>;
-                    })}
-                </div>
+  return (
+    <Stack
+      sx={{
+        backgroundColor: "antiquewhite",
+        borderRadius: "10px",
+        color: "black",
+        maxWidth: "calc(100vw - 300px)",
+        ml: "15px",
+        mt: "calc(50vh + 50px)",
+        zIndex: 1,
+        textAlign: "left",
+      }}
+      className={`${className}`}
+    >
+      <Stack
+        direction="row"
+        sx={{
+          backgroundColor: "whitesmoke",
+          border: "1px dotted black",
+          p: "5px",
+          alignItems: "center",
+        }}
+      >
+        <PromptText>Company:</PromptText>
+        <Typography>{config?.company}</Typography>
+      </Stack>
+      <Stack
+        direction="row"
+        sx={{
+          backgroundColor: "whitesmoke",
+          border: "1px dotted black",
+          p: "5px",
+          alignItems: "center",
+        }}
+      >
+        <PromptText>Role:</PromptText>
+        <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+          {config?.title}
+        </Typography>
+      </Stack>
+      <Stack direction="row" sx={{ width: "100%", alignItems: "center" }}>
+        <Stack
+          direction="row"
+          sx={{
+            width: "100%",
+            backgroundColor: "whitesmoke",
+            border: "1px dotted black",
+            alignItems: "center",
+          }}
+        >
+          <PromptText>Years:</PromptText>
+          <Typography>{config?.yearsActive}</Typography>
+        </Stack>
+        <Stack
+          direction="row"
+          sx={{
+            width: "100%",
+            backgroundColor: "whitesmoke",
+            border: "1px dotted black",
+            alignItems: "center",
+          }}
+        >
+          <PromptText>Time:</PromptText>
+          <Typography>{config?.duration}</Typography>
+        </Stack>
+      </Stack>
+      <Stack
+        direction="row"
+        sx={{
+          w: "100%",
 
-        </div>
-    )
-}
+          backgroundColor: "whitesmoke",
+          border: "1px dotted black",
+          alignItems: "flex-start",
+        }}
+      >
+        <PromptText>Liner notes:</PromptText>
+        <Typography>{config?.notes}</Typography>
+      </Stack>
+      <Stack
+        direction="row"
+        sx={{
+          w: "100%",
+          backgroundColor: "whitesmoke",
+          border: "1px dotted black",
+          alignItems: "center",
+        }}
+      >
+        <PromptText>Album art:</PromptText>
+        <Typography>{config?.imageCredits}</Typography>
+      </Stack>
+      <Stack
+        className="buttonContainer"
+        direction="row"
+        sx={{ justifyContent: "center" }}
+      >
+        {config?.buttons.map(
+          (buttonItem: {
+            label: string;
+            className?: string;
+            link?: string;
+            icon: JSX.Element;
+          }) => {
+            return (
+              <LinkButton
+                icon={buttonItem.icon}
+                className={
+                  buttonItem.className +
+                  (config.buttons.length > 1 ? " linkDouble" : " linkSingle")
+                }
+                label={buttonItem.label}
+                link={buttonItem.link}
+              />
+            );
+          }
+        )}
+      </Stack>
+    </Stack>
+  );
+};
+
+const PromptText: FC<{ children: string }> = ({ children }) => {
+  return (
+    <Typography
+      variant="overline"
+      sx={{
+        fontFamily: "Futura, sans-serif",
+        fontSize: "10px",
+        float: "left",
+        fontWeight: "bold",
+        letterSpacing: ".1rem",
+        margin: "5px",
+        textWrap: "noWrap",
+      }}
+    >
+      {children}
+    </Typography>
+  );
+};

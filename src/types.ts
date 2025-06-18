@@ -26,4 +26,5 @@ export interface DetailsButton {
   label: string;
   className?: string;
   link?: string;
+  icon: JSX.Element;
 }

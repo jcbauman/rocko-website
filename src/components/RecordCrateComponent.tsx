@@ -3,6 +3,8 @@ import { rightArrow } from "../images";
 import "../css/recordSleeve.css";
 import { RecordComponent } from "./RecordComponent";
 import { Roles } from "../types";
+import { IconButton } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 interface RecordCrateProps {
   records: Roles[];
@@ -56,30 +58,49 @@ export const RecordCrateComponent: React.FC<RecordCrateProps> = ({
           hideRecords={!isCrateMode && showDetails !== title}
         />
       ))}
-      {
-        <img
-          className={`rightArrow ${
-            selectedItem === 100 || !isCrateMode ? "rightArrowHidden" : ""
-          }`}
-          onClick={handleClickArrow}
-          src={rightArrow}
-          alt="right arrow"
-          style={{
-            top: getYPos(
-              selectedItem === 100 ? lastSelectedItem : selectedItem
-            ),
+      <IconButton
+        sx={{
+          opacity: selectedItem === 100 || !isCrateMode ? 0 : 1,
+          cursor: "pointer",
+          position: "fixed",
+          right: "calc(43vw - 25vh)",
+          transition: "opacity 1s, transform 0.5s",
+          boxShadow: "darkslategray",
+          zIndex: 10,
+          color: "red",
+          border: "1px solid red",
+          transform:
+            selectedItem === 100 || !isCrateMode ? "scale(0)" : "scale(1)",
+        }}
+        size="medium"
+        style={{
+          top: getYPos(selectedItem === 100 ? lastSelectedItem : selectedItem),
+        }}
+        aria-label="Explore selection"
+        onClick={handleClickArrow}
+      >
+        <ArrowForwardIcon />
+      </IconButton>
+      {!isCrateMode && (
+        <IconButton
+          sx={{
+            opacity: isCrateMode ? 0 : 1,
+            cursor: "pointer",
+            position: "absolute",
+            left: "55vh",
+            top: "5vh",
+            boxShadow: "darkslategray",
+            transition: "opacity 1s, transform 0.5s",
+            transitionDelay: "1s",
+            color: "red",
+            border: "1px solid red",
           }}
-        />
-      }
-      {!isCrateMode ? (
-        <img
-          className={`rightArrowDetails turn-opposite-direction`}
+          size="medium"
+          aria-label="Close selection"
           onClick={handleCloseArrow}
-          src={rightArrow}
-          alt="back arrow"
-        />
-      ) : (
-        ""
+        >
+          <ArrowForwardIcon sx={{ transform: "rotate(180deg)" }} />
+        </IconButton>
       )}
     </div>
   );

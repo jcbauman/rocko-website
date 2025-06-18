@@ -12,6 +12,16 @@ import {
 } from "../images";
 import { RoleDetails, Roles } from "../types";
 import { getCurrentRoleDuration } from "../utils";
+import AppleIcon from "@mui/icons-material/Apple";
+import RadioIcon from "@mui/icons-material/Radio";
+import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
+import EmergencyIcon from "@mui/icons-material/Emergency";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import DraftsIcon from "@mui/icons-material/Drafts";
+import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import ContactlessIcon from "@mui/icons-material/Contactless";
+import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export const PRIORITY_LIST = [
   Roles.PLAYS,
@@ -231,10 +241,12 @@ export const ROLE_COLLECTION: { [value in Roles]: RoleDetails } = {
         label: "Listen on Spotify",
         className: "spotifyGreen",
         link: "https://open.spotify.com/artist/7EBUZ0QFsDLyYKvq7C97BZ?si=gUT2KcHKQZinyxYvLGZMVw&dl_branch=1",
+        icon: <ContactlessIcon sx={{ transform: "rotate90deg" }} />,
       },
       {
         label: "Listen on Apple Music",
         className: "appleMusicRed",
+        icon: <MusicNoteIcon />,
         link: "https://music.apple.com/us/artist/attic-band/1479350842",
       },
     ],
@@ -252,6 +264,7 @@ export const ROLE_COLLECTION: { [value in Roles]: RoleDetails } = {
         label: "Request Thesis",
         className: "",
         link: "mailto:jackrockocasey@gmail.com?subject=Request for Senior Thesis",
+        icon: <DraftsIcon />,
       },
     ],
     yearsActive: "Dec 2016 - Aug 2019",
@@ -267,11 +280,13 @@ export const ROLE_COLLECTION: { [value in Roles]: RoleDetails } = {
       {
         label: "Get it on the App Store",
         className: "",
+        icon: <AppleIcon />,
         link: "https://apps.apple.com/us/app/kpiss-radio/id1553622148",
       },
       {
         label: "Listen to Lunar Rotation",
         className: "",
+        icon: <RadioIcon />,
         link: "https://kpiss.fm/show/lunar-rotation/",
       },
     ],
@@ -288,11 +303,12 @@ export const ROLE_COLLECTION: { [value in Roles]: RoleDetails } = {
       {
         label: "Get on the App Store",
         className: "",
+        icon: <AppleIcon />,
         link: "https://apps.apple.com/us/app/beatitude/id1424467447",
       },
     ],
     yearsActive: "June 2018 - Aug 2018",
-    duration: "",
+    duration: "3 months",
     imageCredits: "Designed by me",
     notes: getNotes(Roles.BEATITUDE),
     image: beatitudeLogo,
@@ -304,6 +320,7 @@ export const ROLE_COLLECTION: { [value in Roles]: RoleDetails } = {
       {
         label: "View on Github",
         className: "",
+        icon: <GitHubIcon />,
         link: "https://github.com/jcbauman/CrateDigger",
       },
     ],
@@ -320,12 +337,14 @@ export const ROLE_COLLECTION: { [value in Roles]: RoleDetails } = {
       {
         label: "Quio on the App Store",
         className: "quioBlue",
-        link: "https://apps.apple.com/us/app/quio-health/id1371020016",
+        icon: <AppleIcon />,
+        link: "https://web.archive.org/web/20220523190428/https://apps.apple.com/us/app/quio-health/id1371020016",
       },
       {
         label: "Company Website",
         className: "quioBlue",
-        link: "https://www.quio.com/",
+        link: "https://web.archive.org/web/20220617082646/https://www.quio.com/",
+        icon: <EmergencyIcon />,
       },
     ],
     yearsActive: "Sep 2019 - Aug 2021",
@@ -342,6 +361,7 @@ export const ROLE_COLLECTION: { [value in Roles]: RoleDetails } = {
         label: "Super 8 Archives",
         className: "",
         link: "https://www.mixcloud.com/djrockonyc/",
+        icon: <RadioIcon />,
       },
     ],
     yearsActive: "Jan 2016 - Sep 2019",
@@ -358,6 +378,7 @@ export const ROLE_COLLECTION: { [value in Roles]: RoleDetails } = {
         label: "Connect with Me",
         className: "linkedInBlue",
         link: "https://www.linkedin.com/in/jackcaseybauman/",
+        icon: <LinkedInIcon />,
       },
     ],
     yearsActive: "June 2019",
@@ -374,6 +395,7 @@ export const ROLE_COLLECTION: { [value in Roles]: RoleDetails } = {
         label: "Dig some plays",
         className: "",
         link: "https://jcbauman.portfoliobox.net/playwriting",
+        icon: <TheaterComedyIcon />,
       },
     ],
     yearsActive: "2014 - 2018",
@@ -390,6 +412,7 @@ export const ROLE_COLLECTION: { [value in Roles]: RoleDetails } = {
         label: "Flowcode Website",
         className: "flowcodeBlack",
         link: "https://flowcode.com",
+        icon: <QrCodeScannerIcon />,
       },
     ],
     yearsActive: "2021 - present",
