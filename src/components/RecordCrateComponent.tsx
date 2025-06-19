@@ -1,5 +1,4 @@
 import React from "react";
-import { rightArrow } from "../images";
 import "../css/recordSleeve.css";
 import { RecordComponent } from "./RecordComponent";
 import { Roles } from "../types";
@@ -64,7 +63,7 @@ export const RecordCrateComponent: React.FC<RecordCrateProps> = ({
           cursor: "pointer",
           position: "fixed",
           right: "calc(43vw - 25vh)",
-          transition: "opacity 1s, transform 0.5s",
+          transition: "opacity 1s ease-in-out, transform 0.5s",
           boxShadow: "darkslategray",
           zIndex: 10,
           color: "red",
@@ -90,7 +89,7 @@ export const RecordCrateComponent: React.FC<RecordCrateProps> = ({
             left: "55vh",
             top: "5vh",
             boxShadow: "darkslategray",
-            transition: "opacity 1s, transform 0.5s",
+            transition: "opacity 1s ease-in-out, transform 0.5s",
             transitionDelay: "1s",
             color: "red",
             border: "1px solid red",

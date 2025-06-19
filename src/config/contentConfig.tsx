@@ -22,8 +22,10 @@ import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import ContactlessIcon from "@mui/icons-material/Contactless";
 import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { college } from "../images/cartoons";
 
 export const PRIORITY_LIST = [
+  Roles.CARTOONS,
   Roles.PLAYS,
   Roles.UCSC,
   Roles.ATTIC,
@@ -227,6 +229,21 @@ const getNotes: any = (title: Roles) => {
           </li>
         </ul>
       );
+    case Roles.CARTOONS:
+      return (
+        <ul className="notesText">
+          <li>
+            I did weekly political cartoons and illustrations for different
+            newspapers for several years.
+          </li>
+          <li>
+            <i>Berkeley High Jacket</i> in Berkeley, CA.
+          </li>
+          <li>
+            <i>City on a Hill Press</i> in Santa Cruz, CA.
+          </li>
+        </ul>
+      );
     default:
       return <p>Nothing to see here</p>;
   }
@@ -420,5 +437,14 @@ export const ROLE_COLLECTION: { [value in Roles]: RoleDetails } = {
     imageCredits: "Courtesy of Flowcode",
     notes: getNotes(Roles.FLOWCODE),
     image: flowcodelogo,
+  },
+  [Roles.CARTOONS]: {
+    title: "Illustrator & Political Cartoonist",
+    company: "Berkeley High Jacket & City On A Hill Press",
+    yearsActive: "2011 - 2018",
+    duration: "~7 years",
+    imageCredits: "Illustrations by me",
+    notes: getNotes(Roles.CARTOONS),
+    image: college,
   },
 };

@@ -4,6 +4,16 @@ import { LinkButton } from "./LinkButton";
 import { RoleDetails, Roles } from "../types";
 import { ROLE_COLLECTION } from "../config/contentConfig";
 import { Stack, Typography } from "@mui/material";
+import { ImageCarousel } from "./ImageCarousel";
+import {
+  college,
+  fafsa,
+  grandJury,
+  livability,
+  measureR,
+  redwoodTrees,
+  violence,
+} from "../images/cartoons";
 
 interface DetailsCardProps {
   title: Roles;
@@ -112,7 +122,7 @@ export const DetailsCard: React.FC<DetailsCardProps> = ({
         direction="row"
         sx={{ justifyContent: "center" }}
       >
-        {config?.buttons.map(
+        {config?.buttons?.map(
           (buttonItem: {
             label: string;
             className?: string;
@@ -124,7 +134,9 @@ export const DetailsCard: React.FC<DetailsCardProps> = ({
                 icon={buttonItem.icon}
                 className={
                   buttonItem.className +
-                  (config.buttons.length > 1 ? " linkDouble" : " linkSingle")
+                  ((config.buttons ?? []).length > 1
+                    ? " linkDouble"
+                    : " linkSingle")
                 }
                 label={buttonItem.label}
                 link={buttonItem.link}
@@ -132,6 +144,19 @@ export const DetailsCard: React.FC<DetailsCardProps> = ({
             );
           }
         )}
+      </Stack>
+      <Stack>
+        <ImageCarousel
+          images={[
+            fafsa,
+            measureR,
+            redwoodTrees,
+            grandJury,
+            violence,
+            college,
+            livability,
+          ]}
+        />
       </Stack>
     </Stack>
   );

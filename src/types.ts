@@ -1,7 +1,7 @@
 export interface RoleDetails {
   title: string;
   company: string;
-  buttons: DetailsButton[];
+  buttons?: DetailsButton[];
   yearsActive: string;
   duration: string;
   imageCredits: string;
@@ -20,6 +20,7 @@ export enum Roles {
   UCSC = "Graduation",
   PLAYS = "Playwriting",
   FLOWCODE = "flowcode",
+  CARTOONS = "Cartoons",
 }
 
 export interface DetailsButton {
